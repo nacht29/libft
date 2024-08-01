@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:02:33 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/20 15:42:02 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 00:53:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+dynamically allocates memory and sets allocated bytes to 0
+*/
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*holder;

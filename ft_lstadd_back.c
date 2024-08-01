@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+*traverses to end of linked list and add one node
+*return value: none
+*/
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*end;

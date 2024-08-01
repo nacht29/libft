@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:15:55 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:36:29 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:26:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+*allocate memory and concatenate two str
+*return value: concatenated str
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	total_size;

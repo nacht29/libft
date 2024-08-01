@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+*add a node at the start of a linked list
+*return value: none
+*/
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new == NULL)

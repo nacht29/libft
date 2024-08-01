@@ -12,17 +12,14 @@
 
 #include "libft.h"
 
-static int	in_set(char c, char const *set)
-{
-	while (*set)
-	{
-		if (c == *set)
-			return (TRUE);
-		set++;
-	}
-	return (FALSE);
-}
+static int	in_set(char c, char const *set);
 
+/*
+*trims away delimiters on both sides of a str
+*multiple delimiters is accepted
+*delimiters in the middle of the min str is ignored
+*return value: trimmed str
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -43,4 +40,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (in_set(s1[end], set) == TRUE)
 		end--;
 	return (ft_substr(s1, start, (end - start + 1)));
+}
+
+static int	in_set(char c, char const *set)
+{
+	while (*set)
+	{
+		if (c == *set)
+			return (TRUE);
+		set++;
+	}
+	return (FALSE);
 }

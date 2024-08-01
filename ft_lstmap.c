@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+*traverses a linked list and apply the function f() to the contents in each node
+*creates a subsequent linked list with the modified nodes
+*return value: pointer to the first node of the new linked list
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;

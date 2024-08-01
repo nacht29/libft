@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:15:01 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:43:18 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:21:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+*locates the (first occurence) of char in a str
+*return value: a substr startting from the (first occurence) of char || NULL if char is not found
+*/
 char	*ft_strchr(const char *s, int c)
 {
 	char	ref;

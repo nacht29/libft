@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+*create a new node
+*return value: pointer to the new node created
+*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;

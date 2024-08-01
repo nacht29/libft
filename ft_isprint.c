@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:05:34 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:05:41 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 00:53:33 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+checks if char is printable char
+*/
 int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')

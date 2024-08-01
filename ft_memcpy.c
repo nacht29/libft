@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 19:15:18 by yachan            #+#    #+#             */
-/*   Updated: 2024/08/02 01:23:07 by marvin           ###   ########.fr       */
+/*   Created: 2024/06/08 21:47:49 by yachan            #+#    #+#             */
+/*   Updated: 2024/06/18 19:31:34 by yachan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-*allocates memory and duplicate a str
-*return value: duplicated str
-*/
-char	*ft_strdup(const char *src)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
-	char	*holder;
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	i = 0;
-	holder = malloc(ft_strlen(src) + 1);
-	if (!holder)
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (!src && !dest)
 		return (NULL);
-	while (src[i])
+	while (i < n)
 	{
-		holder[i] = src[i];
+		*(d + i) = *(s + i);
 		i++;
 	}
-	holder[i] = '\0';
-	return (holder);
+	return (dest);
 }

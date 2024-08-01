@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <yachan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:02:28 by yachan            #+#    #+#             */
-/*   Updated: 2024/07/31 15:23:27 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 00:55:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-@converts string to integer
-@accept whitespaces and 1 sign (+) (-) before digits
+converts string to integer
+accept whitespaces and 1 sign (+) (-) before digits
 */
 int	ft_atoi(const char *nptr)
 {

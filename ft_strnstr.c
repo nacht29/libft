@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:18:38 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:18:39 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:34:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+*locates a substr (needle) in a main str (haystack)
+*return value: substr if located || NULL if substr is not located
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	size_t	len;

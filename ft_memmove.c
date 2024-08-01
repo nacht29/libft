@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 19:15:43 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:15:43 by yachan           ###   ########.fr       */
+/*   Created: 2024/06/18 19:11:15 by yachan            #+#    #+#             */
+/*   Updated: 2024/06/18 19:11:15 by yachan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-*applies the function f() to modify each char in a str
-*return value: none
-*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	len;
 
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (s[i])
+	if (!dst && !src)
+		return ((void *)0);
+	if (dst > src)
 	{
-		(*f)(i, &s[i]);
-		i++;
+		len = n;
+		while (len > 0)
+		{
+			len--;
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+		}
 	}
+	else
+	{
+		len = 0;
+		while (len < n)
+		{
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+			len++;
+		}
+	}
+	return (dst);
 }

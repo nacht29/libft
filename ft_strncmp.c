@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:18:26 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:18:27 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:33:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+*compares two str
+*return value: 0 if both str are identical || non-zero value if both str are not identical
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;

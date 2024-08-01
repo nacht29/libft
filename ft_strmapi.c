@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+*applies the function f() to each char in a str and creates a new modified str
+*return value: modified str
+*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;

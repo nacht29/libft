@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+*calculates the lenght of a linked list
+*return value: (int) lenght of te=he linked list
+*/
 int	ft_lstsize(t_list *lst)
 {
 	int	len;

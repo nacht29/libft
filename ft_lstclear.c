@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+*deletes and frees current node and subsequent node(s) in a linked list
+*return value: none
+*/
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;

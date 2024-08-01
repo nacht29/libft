@@ -3,14 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:11:19 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/20 13:11:20 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:17:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	alloc_len(char const *s, char c);
+static void	split(char const *s, char c, char ***str_arr, size_t itr);
+
+/*
+*splits str according to delimiter and store the splitted substr in an array
+*return value: array of substr
+*/
+char	**ft_split(char const *s, char c)
+{
+	size_t	len;
+	char	**str_arr;
+
+	if (!s)
+		return (NULL);
+	len = alloc_len(s, c);
+	str_arr = malloc((len + 1) * sizeof(char *));
+	if (!str_arr)
+		return (NULL);
+	split(s, c, &str_arr, len);
+	str_arr[len] = NULL;
+	return (str_arr);
+}
 
 static size_t	alloc_len(char const *s, char c)
 {
@@ -54,37 +77,3 @@ static void	split(char const *s, char c, char ***str_arr, size_t itr)
 		itr--;
 	}
 }
-
-char	**ft_split(char const *s, char c)
-{
-	size_t	len;
-	char	**str_arr;
-
-	if (!s)
-		return (NULL);
-	len = alloc_len(s, c);
-	str_arr = malloc((len + 1) * sizeof(char *));
-	if (!str_arr)
-		return (NULL);
-	split(s, c, &str_arr, len);
-	str_arr[len] = NULL;
-	return (str_arr);
-}
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	char const *s = "xxxaaxxxxbbbb";
-	char c = 'x';
-	char **str = ft_split(s, c);
-	printf("len: %lu\n", alloc_len(s, c));
-	int i = -1;
-	while (str[++i])
-	{
-		printf("%s\n", str[i]);
-	}
-	printf("end: %s\n", str[i]);
-	return (0);
-}
-*/

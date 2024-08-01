@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yachan <nacht29.study@gmail.com>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 19:36:53 by yachan            #+#    #+#             */
-/*   Updated: 2024/06/18 19:37:17 by yachan           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:32:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,10 @@ int	main(void)
 	char	c[10];
 	char	c2[10];
 	size_t	len = ft_strlcat(c, "132", 1);
-	size_t	len2 = strlcat(c2, "132", 1);
-	printf("len: %lu\nlen2: %lu\n", len, len2);
+	// size_t	len2 = strlcat(c2, "132", 1);
+	// printf("len: %lu\nlen2: %lu\n", len, len2);
+	printf("str: %s len: %lu\n", c, len);
 	return (0);
 }
+
 */
