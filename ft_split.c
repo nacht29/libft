@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:11:19 by yachan            #+#    #+#             */
-/*   Updated: 2024/08/10 01:01:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/08/02 01:17:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	**ft_split(char const *s, char c)
 	str_arr = malloc((len + 1) * sizeof(char *));
 	if (!str_arr)
 		return (NULL);
-	split(s, c, &str_arr, len); // len means how many substr
+	split(s, c, &str_arr, len);
 	str_arr[len] = NULL;
 	return (str_arr);
 }
