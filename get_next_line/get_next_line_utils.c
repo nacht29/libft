@@ -1,14 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yachan <yachan@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/25 18:28:29 by yachan            #+#    #+#             */
+/*   Updated: 2024/08/25 18:28:30 by yachan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
-int	has_newline(const char *s)
+int	has_newline(const char *s, int c)
 {
+	char	ref;
 	char	*temp;
 
+	ref = (char)c;
 	temp = (char *)s;
 	while (*temp)
 	{
-		temp++;
-		if (*temp == '\n')
+		if (*temp == ref)
 			return (TRUE);
 		temp++;
 	}
