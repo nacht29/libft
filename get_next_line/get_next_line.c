@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yachan <yachan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 18:28:32 by yachan            #+#    #+#             */
-/*   Updated: 2024/10/19 18:31:38 by marvin           ###   ########.fr       */
+/*   Updated: 2024/12/02 21:55:44 by yachan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*get_next_line(int fd)
 		add_node(&lst[fd], temp_buff);
 		free(temp_buff);
 	}
-	return (ft_strtrim(next_line, "\r\n"));
+	return (ft_strtrim(next_line, "\r"));
 }
 
 int	read_to_list(t_node **lst, int fd)
